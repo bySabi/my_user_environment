@@ -1,0 +1,2 @@
+curl -O https://github.com/bySabi/git-crypt/raw/build/build/git-crypt
+install -o root -m 755 git-crypt /usr/local/bin/
