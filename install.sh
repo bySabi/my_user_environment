@@ -35,8 +35,7 @@ install_git_crypt() {
 
 set_gitconfig() {
 	echo ">> Set \".gitconfig\" for user: ${USER}"
-		cp conf/gitconfig ${HOME}/.gitconfig
-		chmod 644 ${HOME}/.gitconfig
+		install -m 644 conf/gitconfig ${HOME}/.gitconfig
 	exit_func $?
 }
 

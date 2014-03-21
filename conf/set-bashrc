@@ -1,6 +1,7 @@
 if ! grep "## bySabi" $HOME/.bashrc >/dev/null
 then
 cat <<EOF >> $HOME/.bashrc
+
 ## bySabi
 source /etc/bash_completion.d/git-prompt
 PS1=$PS1'$(__git_ps1 "\[\e[0;32m\](%s) \[\e[0m\]")
