@@ -29,7 +29,7 @@ set_bashrc() {
 
 install_git_crypt() {
 	echo ">> Install git-crypt"
-		sudo bash conf/install-git-crypt
+		sudo source conf/install-git-crypt
 	exit_func $?
 }
 
@@ -75,7 +75,7 @@ setup_script() {
 			git clone https://github.com/bySabi/${project_dir}.git
 		exit_func $?
 		cd ${project_dir}
-		chmod +x install.sh && ./install.sh &
+		chmod +x install.sh && ./install.sh
 		exit 0
 	fi
 }
