@@ -1,6 +1,6 @@
 if ! grep "## bySabi" $HOME/.bashrc >/dev/null
 then
-cat <<EOF >> $HOME/.bashrc
+cat  >> $HOME/.bashrc <<"EOF"
 
 ## bySabi
 source /etc/bash_completion.d/git-prompt
