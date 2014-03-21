@@ -29,7 +29,7 @@ set_bashrc() {
 
 install_git_crypt() {
 	echo ">> Install git-crypt"
-		source conf/install-git-crypt
+		sudo source conf/install-git-crypt
 	exit_func $?
 }
 
