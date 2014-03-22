@@ -41,6 +41,7 @@ set_gitconfig() {
 
 set_ssh_keys_dir() {
 	echo ">> Create \".ssh\" dir for user: ${USER}"
+		mkdir -p ${HOME}/.ssh
 		echo "copy \"id_rsa\" to ${HOME}/.ssh"
 		echo "copy \"id_rsa.pub\" to ${HOME}/.ssh"
 		echo "copy \"authorized_keys\" to ${HOME}/.ssh"
@@ -49,6 +50,7 @@ set_ssh_keys_dir() {
 
 set_git_crypt_keys_dir() {
 	echo ">> Create \".git-crypt\" dir for user: ${USER}"
+		mkdir -p ${HOME}/.git-crypt
 		echo "copy git-crypt keys to ${HOME}/.git-crypt"
 	exit_func $?
 }
