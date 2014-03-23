@@ -1,0 +1,10 @@
+mkdir -p ${HOME}/.ssh
+
+touch ${HOME}/.ssh/id_rsa
+echo "create blank \"id_rsa\" on ${HOME}/.ssh"
+touch ${HOME}/.ssh/id_rsa.pub
+echo "create blank \"id_rsa.pub\" on ${HOME}/.ssh"
+touch ${HOME}/.ssh/authorized_keys
+echo "create blank \"authorized_keys\" on ${HOME}/.ssh"
+
+chmod 600 ${HOME}/.ssh/*

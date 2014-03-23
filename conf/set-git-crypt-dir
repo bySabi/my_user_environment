@@ -1,0 +1,6 @@
+mkdir -p ${HOME}/.git-crypt
+
+touch ${HOME}/.git-crypt/git-crypt.key
+echo "create blank \"git-crypt.key\" on ${HOME}/.git-crypt"
+
+chmod 600 ${HOME}/.git-crypt/*
