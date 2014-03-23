@@ -17,6 +17,7 @@ main() {
 	set_bashrc
 	install_git_crypt
 	set_gitconfig
+	set_develop_dir
 	set_ssh_keys_dir
 	set_git_crypt_keys_dir
 }
@@ -46,6 +47,12 @@ set_ssh_keys_dir() {
 		echo "copy \"id_rsa.pub\" to ${HOME}/.ssh"
 		echo "copy \"authorized_keys\" to ${HOME}/.ssh"
 	exit_func $?
+}
+
+set_develop_dir() {
+	echo ">> Create \"develop\" dir for user: ${USER}"
+		mkdir -p ${HOME}/develop
+	exit_func $?	
 }
 
 set_git_crypt_keys_dir() {
