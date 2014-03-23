@@ -1,0 +1,10 @@
+#/bin/sh
+
+apt-get update
+apt-get upgrade -y -q
+apt-get dist-upgrade -y -q
+aptitude full-upgrade
+
+apt-get -y -q autoclean
+apt-get -y -q autoremove     
+install_apt_full

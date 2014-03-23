@@ -20,6 +20,7 @@ main() {
 	set_develop_dir
 	set_ssh_keys_dir
 	set_git_crypt_keys_dir
+	install_apt_full
 }
 
 set_bashrc() {
@@ -55,6 +56,12 @@ set_ssh_keys_dir() {
 set_git_crypt_keys_dir() {
 	echo ">> Setup \".git-crypt\" dir for user: ${USER}"
 		source conf/set-git-crypt-dir
+	exit_func $?
+}
+
+install_apt_full() {
+	echo ">> Install \".apt-full\" script on: ${HOME}"
+		install -m 755 conf/apt-full ${HOME}/.apt-full
 	exit_func $?
 }
 
