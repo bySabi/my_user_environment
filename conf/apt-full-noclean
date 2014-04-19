@@ -1,0 +1,6 @@
+#/bin/sh
+
+apt-get update 1>/dev/null
+apt-get upgrade -y -q
+apt-get dist-upgrade -y -q
+aptitude full-upgrade
