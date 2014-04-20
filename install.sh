@@ -68,7 +68,7 @@ install_apt_full() {
 
 install_apt_full_noclean() {
 	echo ">> Install \".apt-full-noclean\" script on: ${HOME}"
-		install -m 755 conf/apt-full-noclean ${HOME}/.apt-full
+		install -m 755 conf/apt-full-noclean ${HOME}/.apt-full-noclean
 	exit_func $?
 }
 
