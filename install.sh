@@ -21,7 +21,7 @@ main() {
 	set_ssh_keys_dir
 	set_git_crypt_keys_dir
 	install_apt_full
-	install_apt_full_noclean
+	install_apt_full_clean
 }
 
 set_bashrc() {
@@ -66,9 +66,9 @@ install_apt_full() {
 	exit_func $?
 }
 
-install_apt_full_noclean() {
-	echo ">> Install \".apt-full-noclean\" script on: ${HOME}"
-		install -m 755 conf/apt-full-noclean ${HOME}/.apt-full-noclean
+install_apt_full_clean() {
+	echo ">> Install \".apt-full-clean\" script on: ${HOME}"
+		install -m 755 conf/apt-full-clean ${HOME}/.apt-full-clean
 	exit_func $?
 }
 
