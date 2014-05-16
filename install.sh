@@ -22,6 +22,7 @@ main() {
 	set_git_crypt_keys_dir
 	install_apt_full
 	install_apt_full_clean
+	set_without_sudo_command
 }
 
 set_bashrc() {
@@ -69,6 +70,12 @@ install_apt_full() {
 install_apt_full_clean() {
 	echo ">> Install \".apt-full-clean\" script on: ${HOME}"
 		install -m 755 conf/apt-full-clean ${HOME}/.apt-full-clean
+	exit_func $?
+}
+
+set_without_sudo_command() {
+	echo ">> Set not sudo for daily use commands"
+		source conf/not-sudo-command
 	exit_func $?
 }
 

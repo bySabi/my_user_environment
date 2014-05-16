@@ -1,0 +1,7 @@
+#!/bin/bash
+
+commands="/sbin/reboot /sbin/shutdown"
+username=$USER
+
+sudo chown root:${username} ${commands} && sudo chmod 4770 ${commands}
+

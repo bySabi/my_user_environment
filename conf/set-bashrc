@@ -1,3 +1,5 @@
+#!/bin/bash
+
 if ! grep "## bySabi" $HOME/.bashrc >/dev/null
 then
 cat  >> $HOME/.bashrc <<"EOF"

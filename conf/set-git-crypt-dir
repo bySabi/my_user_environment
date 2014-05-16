@@ -1,3 +1,5 @@
+#!/bin/bash
+
 mkdir -p ${HOME}/.git-crypt
 
 touch ${HOME}/.git-crypt/git-crypt.key
