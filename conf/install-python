@@ -1,0 +1,4 @@
+#!/bin/bash
+
+apt-cyg install python python-crypto python-paramiko python-setuptools
+easy_install pip

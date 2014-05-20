@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if ! grep "## bySabi-git_prompt" $HOME/.bash_profile >/dev/null; then
+	cat >> $HOME/.bash_profile <<"EOF"
+
+## bySabi-git_prompt
+source /etc/bash_completion.d/git-prompt
+PS1=$PS1'$(__git_ps1 "\[\e[0;32m\](%s) \[\e[0m\]")'
+
+EOF
+fi
+

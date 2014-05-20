@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if ! grep "## bySabi-python_virtualenv" $HOME/.bash_profile >/dev/null; then
+	mkdir -p $HOME/.virtualenvs
+	cat >> $HOME/.bash_profile <<"EOF"
+
+## bySabi-python_virtualenv
+export WORKON_HOME=$HOME/.virtualenvs
+export PIP_VIRTUALENV_BASE=$WORKON_HOME
+source /bin/virtualenvwrapper.sh
+
+EOF
+fi
+

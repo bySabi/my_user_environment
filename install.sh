@@ -13,12 +13,14 @@ script_dir_parent=${PWD##*/}
 main() {
 	setup_script ${script_dir_parent}
 
-	set_bashrc
+#	set_bashrc
 	install_git_crypt
 	set_gitconfig
+	set_bash_profile_git_prompt
 	set_develop_dir
 	set_ssh_keys_dir
 	set_git_crypt_keys_dir
+#	install_python
 	install_apt_full
 	install_apt_full_clean
 	set_without_sudo_command
@@ -39,6 +41,12 @@ install_git_crypt() {
 set_gitconfig() {
 	echo ">> Set \".gitconfig\" for user: ${USER}"
 		install -m 644 conf/gitconfig ${HOME}/.gitconfig
+	exit_func $?
+}
+
+set_bash_profile_git_prompt() {
+	echo ">> Set .bash_profile git-prompt for user: ${USER}"
+		source conf/set-bash_profile-git_prompt
 	exit_func $?
 }
 
@@ -102,7 +110,7 @@ setup_script() {
 			git clone https://github.com/bySabi/${project_dir}.git
 		exit_func $?
 		cd ${project_dir}
-		chmod +x $(basename "$0") &&  ./$(basename "$0") "$*"
+		chmod +x $(basename "$0") && ./$(basename "$0") "$*"
 		exit 0
 	fi
 }
